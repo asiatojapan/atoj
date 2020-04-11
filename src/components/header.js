@@ -34,7 +34,7 @@ const Header = ({ siteTitle }) => (
         </a>
     </div>
     <div>
-      <a href="#" class="inline-block text-xs px-4 py-2 leading-none py-3 rounded bg-green-700 text-white hover:bg-green-600 mt-4 lg:mt-0">Download</a>
+      <a href="#" class="inline-block text-xs px-4 py-2 leading-none py-3 transition duration-200 ease-in rounded bg-green-700 text-white hover:bg-green-600 mt-4 lg:mt-0">Download</a>
     </div>
   </div>
 </nav>

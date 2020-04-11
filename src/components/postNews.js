@@ -29,21 +29,17 @@ const PostNews = () => {
         <ul>
         {data.allWordpressPost.edges.map(post => (
             <li key={post.node.wordpress_id}>
-                <div>
-                  <Link
-                    to={`/${post.node.path}`}
-                    style={{
-                      // display: "flex",
-                      color: "black",
-                      textDecoration: "none",
-                    }}
-                  > <h3
-                    dangerouslySetInnerHTML={{ __html: post.node.title }}
-                    style={{ fontSize: 20, marginTop:0 }}
-                  /></Link>
-                  <p style={{ margin: 0, color: "grey", fontSize:16, marginTop:8, marginBottom:10 }}>
+                <div>   
+                    <p style={{ margin: 0, color: "grey", fontSize:16, marginTop:8, marginBottom:10 }}>
                      {post.node.date}
                   </p>
+                  <Link class="text-black hover:text-green-700"
+                    to={`/${post.node.path}`}
+                  
+                  > <div
+                    dangerouslySetInnerHTML={{ __html: post.node.title }}
+                    class="text-black text-md hover:text-green-700 hover:underline transition duration-200 ease-in"
+                  /></Link>
                 </div>
 
             </li>
