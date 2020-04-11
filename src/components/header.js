@@ -4,7 +4,7 @@ import React from "react"
 
 const Header = ({ siteTitle }) => (
 
-    <nav class="flex items-center justify-between flex-wrap bg-white p-6 sticky top-0">
+    <nav class="flex items-center justify-between flex-wrap bg-white p-6 sticky top-0 z-50">
   <div class="flex items-center flex-shrink-0 text-black mr-6">
    <Link
           to="/"

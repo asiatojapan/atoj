@@ -3,7 +3,11 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
+import OfficeImage from "../components/image.js"
+import PostNews from "../components/postNews.js"
+
 const IndexPage = ({ data }) => {
+
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -30,10 +34,9 @@ const IndexPage = ({ data }) => {
         </div>
           </div>
       </div>
+      <OfficeImage/>
 
-      <img alt="Office deck photo with man and woman" class="Image" src="https://d1wtrdup4rnaqb.cloudfront.net/assets/work_cobrooklynoffice101-1579284375.jpg" title=""/>
-
-    <div class="px-16">
+      <div class="px-16">
         <div class="py-32 md:pt-32 md:pb-16 text-gray-900 md:w-9/12 flex flex-col justify-center p-4">
         <p class="text-thin text-gray-600 text-6xl mb-12" style={{fontFamily: "Graphik Thin"}}>
            What we do?
@@ -45,10 +48,20 @@ const IndexPage = ({ data }) => {
       </div>
       
       <div class="px-16">
+        <div class="py-32 md:pt-32 md:pb-16 text-gray-900 md:w-9/12 flex flex-col justify-center p-4">
+        <p class="text-thin text-gray-600 text-6xl mb-12" style={{fontFamily: "Graphik Thin"}}>
+       Latest News
+            </p>  
+           <PostNews />
+      </div>
+    </div>
+
+      
+      <div class="px-16">
       <div class="py-32 md:pt-32 md:pb-16 text-gray-900 md:w-9/12 flex flex-col justify-center p-4">
         <p class="text-thin text-gray-600 text-6xl mb-12" style={{fontFamily: "Graphik Thin"}}>
            Posts
-            </p> 
+        </p> 
       <ul style={{ listStyle: "none" }}>
         {data.allWordpressPost.edges.map(post => (
           <li key={post.node.wordpress_id}>
@@ -61,14 +74,21 @@ const IndexPage = ({ data }) => {
                     color: "black",
                     textDecoration: "none",
                   }}
-                > <h3
+                > 
+                <h3
                   dangerouslySetInnerHTML={{ __html: post.node.title }}
-                  style={{ fontSize: 33, marginTop:0 }}
+                  style={{ fontSize: 20, marginTop:0 }}
                 /></Link>
-                <p style={{ margin: 0, color: "grey", fontSize:16, marginTop:8, marginBottom:10 }}>
+
+{post.node.featured_media.localFile
+  && (
+    <Img fixed={post.node.featured_media.localFile.childImageSharp.fixed} />
+  )
+}
+                 <p style={{ margin: 0, color: "grey", fontSize:16, marginTop:8, marginBottom:10 }}>
                    {post.node.date}
                 </p>
-               
+                   {post.node.categories[0].name}
               </div>
 
           </li>
@@ -79,9 +99,10 @@ const IndexPage = ({ data }) => {
   )
 }
 export default IndexPage
+
 export const query = graphql`
   query {
-    allWordpressPost(limit: 6) {
+    allWordpressPost(limit: 2,  filter:  {categories: {elemMatch: {name: {nin: "NEWS"}}}}) {
       edges {
         node {
           title
@@ -90,16 +111,21 @@ export const query = graphql`
           excerpt
           wordpress_id
           path
-          date(formatString: "MMMM DD, YYYY")
+          categories {
+            name
+          }
           featured_media {
+            source_url
             localFile {
               childImageSharp {
-                fixed(width: 1000) {
+                fixed(width: 300) {
                   ...GatsbyImageSharpFixed
-                }
+                  }
               }
             }
           }
+          date(formatString: "MMMM DD, YYYY")
+
         }
       }
     }

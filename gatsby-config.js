@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `ASIA to JAPAN`,
@@ -20,8 +22,8 @@ module.exports = {
         auth: {
 					// If auth.user and auth.pass are filled, then the source plugin will be allowed
 					// to access endpoints that are protected with .htaccess.
-					htaccess_user: " asia2tojapan",
-					htaccess_pass: "asia2Japan2018!",
+					htaccess_user: process.env.WORDPRESS_USER,
+					htaccess_pass: process.env.WORDPRESS_PW,
 					htaccess_sendImmediately: false,
 
 						},
