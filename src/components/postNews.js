@@ -17,7 +17,7 @@ const PostNews = () => {
                 categories {
                   name
                 }
-                date(formatString: "MMMM DD, YYYY")
+                date(formatString: "YYYY.M.D")
         
               }
             }
@@ -27,8 +27,10 @@ const PostNews = () => {
   
     return (
         <ul>
+
+<div class="border-b border-t">
         {data.allWordpressPost.edges.map(post => (
-            <li key={post.node.wordpress_id}>
+            <li key={post.node.wordpress_id} v-for="item in items" class="py-3 border-t first:border-t-0">
                 <div>   
                     <p style={{ margin: 0, color: "grey", fontSize:16, marginTop:8, marginBottom:10 }}>
                      {post.node.date}
@@ -43,7 +45,9 @@ const PostNews = () => {
                 </div>
 
             </li>
-          ))}</ul>
+          ))}
+          </div>
+          </ul>
     )
   }
   
