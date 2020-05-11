@@ -4,7 +4,7 @@ import React from "react"
 
 const Header = ({ siteTitle }) => (
 
-    <nav class="flex items-center justify-between flex-wrap bg-white p-6 sticky top-0 z-50">
+  <nav class="flex items-center justify-between flex-wrap bg-white p-6 sticky top-0 z-50">
   <div class="flex items-center flex-shrink-0 text-black mr-6">
    <Link
           to="/"
@@ -24,10 +24,10 @@ const Header = ({ siteTitle }) => (
        会社概要
       </a>
       <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-green-700 hover:text-green-600 mr-4">
-      会社概要
+      サービス
       </a>
       <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-green-700 hover:text-green-600 mr-4">
-        For Students      
+      成功事例     
         </a>
         <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-green-700 hover:text-green-600 mr-4">
         採用情報
