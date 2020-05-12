@@ -7,14 +7,20 @@ module.exports = {
     author: `@ASIA to JAPAN`,
   },
   plugins: [
-    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require("tailwindcss"), require("autoprefixer")]
+      }
+    },
+
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-wordpress`,
       options: {
         // your WordPress source
         baseUrl: `asiatojapan.com`,
-        protocol: `http`,
+        protocol: `https`,
         // is it hosted on wordpress.com, or self-hosted?
         hostingWPCOM: false,
         // does your site use the Advanced Custom Fields Plugin?
@@ -50,6 +56,14 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: false,
+        develop: false,
+        tailwind: true,
+      },
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

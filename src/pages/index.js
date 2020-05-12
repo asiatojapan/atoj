@@ -35,13 +35,13 @@ C20.1,15.8,20.2,15.8,20.2,15.7z`;
           <div class="text-6xl sm:text-6xl leading-tight mb-4">
                 きっかけから活躍まで
             </div> 
-            <p class="text-thin text-gray-600 text-sm">
+            <p class="text-thin regal text-sm">
             We help businesses identify what makes them unique through an impactful brand discovery workshop.
             </p> 
             
             <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
             <div class="mt-3 sm:mt-0 sm:ml-3">
-            <a href="/register" class="hover:text-green-600 transition duration-200 ease-in text-green-700 underline">
+            <a href="/register" class="hover:governor-bay-600 transition duration-200 ease-in text-governor-bay-400 underline">
               Get started
             </a>
             </div>
