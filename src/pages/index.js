@@ -8,31 +8,15 @@ import PostNews from "../components/postNews.js"
 
 
 
-import MapGL, { Marker, Pin, Popup, CityInfo} from 'react-map-gl';
-
-
-
 const IndexPage = ({ data }) => {
-  const MAPBOX_TOKEN = 'pk.eyJ1IjoibHVtamlhaHVpIiwiYSI6ImNrYTI0cXZvdTA4ajYzb21ldm44Y3NnYzYifQ.iuFO3bWaqabf8F25ZiSicA'
 
-  const [viewport, setViewport] = useState({
-    latitude: 20.8,
-    longitude: 120.4,
-    zoom: 2.3,
-    bearing: 0,
-    pitch: 0
-  });
-  
-const ICON = `M20.2,15.7L20.2,15.7c1.1-1.6,1.8-3.6,1.8-5.7c0-5.6-4.5-10-10-10S2,4.5,2,10c0,2,0.6,3.9,1.6,5.4c0,0.1,0.1,0.2,0.2,0.3
-c0,0,0.1,0.1,0.1,0.2c0.2,0.3,0.4,0.6,0.7,0.9c2.6,3.1,7.4,7.6,7.4,7.6s4.8-4.5,7.4-7.5c0.2-0.3,0.5-0.6,0.7-0.9
-C20.1,15.8,20.2,15.8,20.2,15.7z`;
 
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <div class="px-8 md:px-32 hero flex items-center sm:text-center">
-        <div class="py-32 md:pt-32 md:pb-56 text-black max-w-2xl mx-auto text-center">
-          <div class="text-6xl sm:text-6xl leading-tight mb-4">
+        <div class="py-32 md:pt-32 md:pb-56 text-black max-w-5xl mx-auto text-center">
+          <div class="text-8xl leading-tight mb-4">
                 きっかけから活躍まで
             </div> 
             <p class="text-thin regal text-sm">
@@ -41,64 +25,20 @@ C20.1,15.8,20.2,15.8,20.2,15.7z`;
             
             <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
             <div class="mt-3 sm:mt-0 sm:ml-3">
-            <a href="/register" class="hover:governor-bay-600 transition duration-200 ease-in text-governor-bay-400 underline">
-              Get started
+            <a href="/" className="hover:text-governor-bay-400 transition duration-200 ease-in text-governor-bay-500 text-3xl underline">
+         Get started
             </a>
             </div>
           <div class="mt-3 sm:mt-0 sm:ml-3">
-          <a href="/register" class="hover:text-gray-600 transition duration-200 ease-in text-gray-700 underline">
-              Download
+          <a href="/" className="hover:text-governor-bay-400 transition duration-200 ease-in text-governor-bay-500 text-3xl underline">
+          Download
             </a>
           </div>
         </div>
           </div>
       </div>
       <OfficeImage/>
-      <MapGL
-      {...viewport}
-      width="100vw"
-      height="100vh"
-      mapStyle="mapbox://styles/lumjiahui/cka253xev5ze51io5508ulwuh"
-      onViewportChange={nextViewport => setViewport(nextViewport)}
-      mapboxApiAccessToken={MAPBOX_TOKEN}
-      >
-      <Marker longitude={103.7727} latitude={1.2907}>
-      <svg
-          height="20"
-          viewBox="0 0 24 24"
-          style={{
-            cursor: 'pointer',
-            fill: '#d00',
-            stroke: 'none',
-          }}
-        >
-          <path d={ICON} />
-        </svg>  
-        <Popup
-          tipSize={100}
-          anchor="top"
-          longitude={104}
-          latitude={1}
-          closeOnClick={false}
-         
-        >
-          HELLo
-        </Popup>
-        </Marker>
-        <Marker longitude={110.7727} latitude={1.2907}>
-      <svg
-          height="20"
-          viewBox="0 0 24 24"
-          style={{
-            cursor: 'pointer',
-            fill: '#d00',
-            stroke: 'none',
-          }}
-        >
-          <path d={ICON} />
-        </svg>
-        </Marker>
-      </MapGL>
+   
     
 
       <div class="container mx-auto px-4">
@@ -111,9 +51,6 @@ C20.1,15.8,20.2,15.8,20.2,15.7z`;
           留学生採用では難しい＜IT＞＜機械＞＜電気・電子＞など「理系で日本語のできる学生」の採用を、インド、シンガポール、中国、マレーシア、ベトナム、タイ、インドネシア、フィリピン、台湾といった、各国のトップクラスの大学を対象にした、「学内での無料日本語授業」を提供することで実現。人材紹介（エージェント）機能から、内定者への日本語教育まで行う「採用フルサポートサービス」で課題に応えます。
             </div> 
         </div>
-        </div>
-        <div class="ml-48 -mt-48">
-        <OfficeImage />
         </div>
       </div>
       
