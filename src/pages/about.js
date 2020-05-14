@@ -122,8 +122,9 @@ const About = ({ data }) => {
           <div class="grid grid-cols-2 gap-16"> 
             <div>
               <div className="mb-10" style={{width: "500px", height:"500px"}}> 
+              <img src={data.cloudinaryMedia.secure_url} alt={"no alt :("}style={{width: "500px", height:"500px"}} />
                 </div>
-              <div className="text-4xl mb-5 font-semibold">三瓶 雅人 </div>
+              <div className="text-4xl my-5 font-semibold">三瓶 雅人 </div>
               <div className="text-2xl mb-5 text-governor-bay-500">代表取締役社長</div>
               <div className="text-gray-900">
               1997年、株式会社キャリアデザインセンター入社。キャリア採用広告営業、営業マネージャ・営業部長、マーケティング部長、人材紹介部門の事業責任者となる。
@@ -135,6 +136,7 @@ const About = ({ data }) => {
 
             <div>
             <div className="mb-10" style={{width: "500px", height:"500px"}}>
+     
             </div>
               <div className="text-4xl mb-5 font-semibold">赤羽根 大輔</div>
               <div className="text-2xl mb-5 text-governor-bay-500">取締役副社長</div>
@@ -155,7 +157,7 @@ const About = ({ data }) => {
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.481697005647!2d139.78039301519735!3d35.68976218019236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d01e080d06f%3A0x47982cfbf7204c28!2z5qCq5byP5Lya56S-QVNJQSB0byBKQVBBTg!5e0!3m2!1sja!2sjp!4v1589375295596!5m2!1sja!2sjp" style={{width: "100%", height: "500px"}}></iframe>
    
       <section class="mx-auto py-10 md:py-20 px-4">
-         <div className="text-md text-governor-bay-500  text-center py-10 text-black uppercase" style={{fontFamily: "IBM Plex Sans"}}>Our Team</div> 
+         <div className="text-md text-governor-bay-500  text-center pb-10 text-black uppercase" style={{fontFamily: "IBM Plex Sans"}}>Our Team</div> 
             <p className="text-6xl font-bold text-center mb-16 text-black"> 本社 / 面接会場 </p> 
             <div className="flex px-48">
                 <div class="w-full md:w-1/2 ">
@@ -179,8 +181,7 @@ const About = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-     
-      {header()}
+        {header()}
         {vision()}
        {companyDetails()}
        {members()}
@@ -191,3 +192,11 @@ const About = ({ data }) => {
 }
 export default About
 
+
+export const data = graphql`
+    query CloudinaryImage {
+      cloudinaryMedia(public_id: {eq: "gallery/snp_hjtfvh"}) {
+          secure_url
+        }
+    }
+`
