@@ -21,7 +21,6 @@ module.exports = {
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         resourceType: `image`,
         type: `upload`,
-        prefix: `abc-xyz/`
       }
     },
 
