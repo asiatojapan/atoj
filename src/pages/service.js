@@ -73,7 +73,7 @@ const Service = ({ data }) => {
 
         
       </div>
-    <div class="px-8 md:px-8 hero border">
+    <div class="px-8 md:px-8 hero border text-center">
     <div class="py-10 md:pt-20 md:pb-20">
      <div className="text-3xl text-black font-semibold mb-10"> 海外トップクラスの学生リストを見てみたい方
      </div>
@@ -89,9 +89,9 @@ const Service = ({ data }) => {
     <section>
       <div class="px-8 md:px-8 hero">
          <div class="py-10 md:pt-20 md:pb-20">
-
-             <div className="text-6xl py-10 mb-10 text-center font-bold text-black">学生獲得の取り組み</div> 
-               <div class="grid grid-cols-4 grid-gap-10 text-center">
+         <div className="text-sm text-governor-bay-500 py-10 mb-2 text-black uppercase" style={{fontFamily: "IBM Plex Sans"}}>How we manage our Student's Database</div> 
+             <div className="text-6xl pb-10 mb-10 font-bold text-black">学生獲得の取り組み</div> 
+               <div class="grid grid-cols-4 gap-16 text-3xl leading-snug">
                <div>
                理系学生向け日本語授業の展開
                </div>
