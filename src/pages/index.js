@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Home" keywords={[`asiatojapan`, `application`, `react`]} />
       <div class="px-8 md:px-32 hero flex items-center sm:text-center">
         <div class="py-32 md:pt-32 md:pb-56 text-black max-w-5xl mx-auto text-center">
           <div class="text-8xl leading-tight mb-4">
@@ -37,10 +37,10 @@ const IndexPage = ({ data }) => {
         </div>
           </div>
       </div>
-      <OfficeImage/>
-   
-    
 
+      <img src={data.officeImage.secure_url} alt={"office"} style={{width: "100%", height: "500px"}} className="object-cover"/>
+   
+  
       <div class="container mx-auto px-4">
         <div class="py-32 md:pt-32 md:pb-16 text-gray-900 md:w-9/12 flex flex-col justify-center">
           <div class="bg-white p-8 z-30">
@@ -214,5 +214,9 @@ export const query = graphql`
         }
       }
     }
+    officeImage: cloudinaryMedia(public_id: {eq: "gallery/company-loc_1_tjmrum"}) {
+      secure_url
+    }
+    
   }
 `
