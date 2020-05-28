@@ -38,12 +38,12 @@ return(
         <a href="https://studygoworkjapan.com" class="block mt-4 lg:inline-block lg:mt-0 text-governor-bay-500 hover:text-governor-bay-400mr-4">
         学生の方へ
         </a>
-        <a href="https://studygoworkjapan.com" class="block mt-4 lg:inline-block lg:mt-0 text-governor-bay-500 hover:text-governor-bay-400 mr-4">
-        ユーザーサイト
-        </a>
      
     </div>
     <div>
+    <a href="https://studygoworkjapan.com" class="inline-block text-xs px-4 mr-2 py-2 leading-none py-3 transition duration-200 ease-in text-white rounded bg-governor-bay-500 hover:bg-governor-bay-400 mt-4 lg:mt-0">
+       ユーザーサイト
+        </a>
       <a href="#" class="inline-block text-xs px-4 py-2 leading-none py-3 transition duration-200 ease-in text-white rounded bg-governor-bay-500 hover:bg-governor-bay-400 mt-4 lg:mt-0">
       問合せ
       </a>

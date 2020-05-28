@@ -10,33 +10,30 @@ import PostNews from "../components/postNews.js"
 
 const IndexPage = ({ data }) => {
 
+  const header = () => 
+   (    
+    <section>
+    <div class="py-48 md:px-32 hero">
+      <div class="grid grid-cols-3 ">
+
+      <div> <img src={data.officeImage.secure_url} alt={"office"} style={{width: "100%", height: "200px"}} className="object-cover"/></div>
+      <div className="col-span-2"> 
+      <div class="text-7xl leading-tight mb-4">きっかけから活躍まで</div>
+      <p class="text-3xl">
+        What was our mission again? It's supposed to be at this line.
+      </p> 
+      </div>
+      </div>
+    </div>
+    </section>
+  )
+
 
   return (
     <Layout>
       <SEO title="Home" keywords={[`asiatojapan`, `application`, `react`]} />
-      <div class="px-8 md:px-32 hero flex items-center sm:text-center">
-        <div class="py-32 md:pt-32 md:pb-56 text-black max-w-5xl mx-auto text-center">
-          <div class="text-8xl leading-tight mb-4">
-                きっかけから活躍まで
-            </div> 
-            <p class="text-thin regal text-sm">
-            We help businesses identify what makes them unique through an impactful brand discovery workshop.
-            </p> 
-            
-            <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-            <div class="mt-3 sm:mt-0 sm:ml-3">
-            <a href="/" className="hover:text-governor-bay-400 transition duration-200 ease-in text-governor-bay-500 text-3xl underline">
-         Get started
-            </a>
-            </div>
-          <div class="mt-3 sm:mt-0 sm:ml-3">
-          <a href="/" className="hover:text-governor-bay-400 transition duration-200 ease-in text-governor-bay-500 text-3xl underline">
-          Download
-            </a>
-          </div>
-        </div>
-          </div>
-      </div>
+      {header()}
+    
 
       <img src={data.officeImage.secure_url} alt={"office"} style={{width: "100%", height: "500px"}} className="object-cover"/>
    
@@ -45,7 +42,7 @@ const IndexPage = ({ data }) => {
         <div class="py-32 md:pt-32 md:pb-16 text-gray-900 md:w-9/12 flex flex-col justify-center">
           <div class="bg-white p-8 z-30">
         <p class="text-black text-6xl mb-12">
-           What we do?
+        こんな課題はありませんか？		
             </p> 
                 <div class="text-xl leading-relaxed mb-4">
           留学生採用では難しい＜IT＞＜機械＞＜電気・電子＞など「理系で日本語のできる学生」の採用を、インド、シンガポール、中国、マレーシア、ベトナム、タイ、インドネシア、フィリピン、台湾といった、各国のトップクラスの大学を対象にした、「学内での無料日本語授業」を提供することで実現。人材紹介（エージェント）機能から、内定者への日本語教育まで行う「採用フルサポートサービス」で課題に応えます。
