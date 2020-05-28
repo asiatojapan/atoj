@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import OfficeImage from "../components/image.js"
 
 
-const Service = ({ data }) => {
+const Schools = ({ data }) => {
 
   const header = ()=> (
     <div class="px-16 md:px-16 hero text-black">
@@ -257,7 +257,6 @@ const Service = ({ data }) => {
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
      
         {header()}
-        <OfficeImage/>
         {merits()}
         {process()}
         <hr/>
@@ -267,19 +266,4 @@ const Service = ({ data }) => {
   )
 }
 
-export default Service
-
-export const data = graphql`
-  query AboutQuery {
-    sanpei: cloudinaryMedia(public_id: {eq: "gallery/snp_hjtfvh"}) {
-      secure_url
-    }
-    
-    akb: cloudinaryMedia(public_id: {eq: "gallery/akb_ttww5z"}) {
-      secure_url
-    }
-
-    logo: cloudinaryMedia(public_id: {eq: "gallery/companyLogo_kc0kis"}) {
-      secure_url
-    }
-}`
+export default Schools

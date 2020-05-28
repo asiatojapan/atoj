@@ -21,7 +21,7 @@ const About = ({ data }) => {
   )
 
    const services = ()=> (
-        <section class="px-16 md:px-16 hero">
+        <section class="px-16 md:px-32 hero">
         <div class="py-16 mx-auto">
     
 
@@ -57,7 +57,7 @@ const About = ({ data }) => {
   )
 
   const vision = () => (
-    <section class="px-16 md:px-16 hero">
+    <section class="px-16 md:px-32 hero">
     <div class="py-16 mx-auto">
     <div className="text-md py-10 uppercase text-governor-bay-500" style={{fontFamily: "IBM Plex Sans"}}>Our Vision</div> 
     <div className="text-6xl font-bold text-black mb-10">きっかけから、活躍まで		</div> 
@@ -80,7 +80,7 @@ const About = ({ data }) => {
   )
 
   const companyDetails = () => (
-    <section class="px-16 hero text-black">
+    <section class="px-32 hero text-black">
       <div class="py-16">
       <div class="grid grid-cols-3 gap-32"> 
       <div>
@@ -128,7 +128,7 @@ const About = ({ data }) => {
 
 
   const members = () => (
-    <section class="px-16 hero text-black">
+    <section class="px-32 hero text-black">
           <div class="py-16">
           <div class="grid grid-cols-3 gap-32"> 
           <div>
@@ -171,7 +171,7 @@ const About = ({ data }) => {
     const location = () => (
       <>
       <OfficeImage/>
-      <section class="px-16 hero text-black">
+      <section class="px-32 hero text-black">
           <div class="py-32">
           <div class="grid grid-cols-3 gap-32"> 
           <div>

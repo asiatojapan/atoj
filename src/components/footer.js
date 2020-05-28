@@ -5,47 +5,65 @@ import React, { useState } from "react"
 const Footer = ({ siteTitle }) => {
 
 return(
-  <footer class="bg-governor-bay-500">
-      <div class="px-16 hero text-white border-b border-gray-500">
+  <footer >
+      <div class="bg-gray-100 px-32 hero text-black ">
           <div class="py-16">
-          <div class="grid grid-cols-3 gap-32"> 
+          <div class="grid grid-cols-2 gap-32"> 
           <div>
-          <div class="text-white text-4xl mt-4">Want to talk?</div>
-          <div class="text-gray-100 text-2xl mt-4 block select-none">info@asiatojapan.com</div>
-          </div>
+          <div class="text-black text-4xl mt-4">Want to talk?</div>
+          <div class="text-black text-2xl mt-4 block select-none mb-20">info@asiatojapan.com</div>
+         
 
-           <div>
-           <div class="text-gray-100 text-xs">
-           <div class="text-white text-sm font-semibold uppercase mb-4">本社　</div> 
-              〒103-006 <br/> 
-              東京都中央区日本橋富沢町10-13  <br/>
-              & WORK NIHONBASHI 7F <br/> 
-              03-5579-2139　+813-5579-2139 
-              <br/><br/>
-
-             <div class="text-white text-sm font-semibold uppercase mb-4">大阪オフィス　</div> 
-                〒541-0053 <br/> 
-              大阪府大阪市中央区本町4-2-12  <br/>
-              東芝大阪ビル 8F <br/>
-                06-6556-6402
-            </div> </div>
-
+           <div className="grid grid-cols-2 gap-32">
+             <div>
+      
+              <div class="text-black text-sm font-semibold uppercase mb-4">本社　</div> 
+              <div class="text-black text-xs">
+                  〒103-006 <br/> 
+                  東京都中央区日本橋富沢町10-13  <br/>
+                  & WORK NIHONBASHI 7F <br/> 
+                  03-5579-2139　+813-5579-2139  
+                </div>
+              </div> 
+              <div>
+             <div class="text-black text-sm font-semibold uppercase mb-4">大阪オフィス　</div> 
+             <div class="text-black text-xs">
+                    〒541-0053 <br/> 
+                  大阪府大阪市中央区本町4-2-12  <br/>
+                  東芝大阪ビル 8F <br/>
+                    06-6556-6402
+                    </div>
+                </div>
+            </div>
+            </div>
             <div>
-           <div class="text-white text-sm font-semibold uppercase mb-4">Links</div> 
-                <ul class="text-xs">
-                  
-                <li><a href="https://fshost.me/contact" class="text-gray-100 hover:text-white">会社概要</a></li>
-                <li><a href="https://fshost.me/contact" class="text-gray-100 hover:text-white">Study Go Work JAPAN</a></li>
-                <li><a href="https://fshost.me/contact" class="text-gray-100 hover:text-white">採用情報</a></li>
-                <li><a href="https://fshost.me/help/rcon" class="text-gray-100 hover:text-white">資料請求・お問合せ</a></li> 
-                <li><a href="https://fshost.me/help/faq" class="text-gray-100 hover:text-white">アクセス</a></li> </ul>
+                <ul class="mt-4 text-4xl block select-none">
+                <li className="pb-10 border-b border-gray-400">
+                  <span className="text-sm font-governor-blue-500 mr-5"> 01 </span>
+                  <a href="/about" class="text-black hover:text-gray-600">会社概要</a></li>
+
+                <li className="py-10 border-b  border-gray-400">
+                <span className="text-sm font-governor-blue-500 mr-5"> 02 </span>
+                <a href="/service" class="text-black hover:text-gray-600">サービス</a></li>
+
+                <li className="py-10 border-b border-gray-400">
+                <span className="text-sm font-governor-blue-500 mr-5"> 03 </span>
+                <a href="http://success.asiatojapan.com" class="text-black hover:text-gray-600">成功事例</a></li>
+
+                <li className="py-10 border-b border-gray-400">
+                <span className="text-sm font-governor-blue-500 mr-5"> 04 </span>
+                <a href="https://fshost.me/help/rcon" class="text-black hover:text-gray-600">採用情報 </a></li> 
+
+                <li className="py-10">
+                <span className="text-sm font-governor-blue-500 mr-5"> 05 </span>
+                <a href="https://fshost.me/help/faq" class="text-black hover:text-gray-600">アクセス</a></li> </ul>
                
               </div>
             </div>
          </div>  
         </div>
 
-        <div className="px-16 hero">
+        <div className="px-16 hero bg-governor-bay-500">
             <div class="flex justify-between items-center py-12">
               <div class="flex items-center">
                    <div class="flex-1">
