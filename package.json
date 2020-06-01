@@ -25,6 +25,7 @@
     "react-helmet": "^5.2.1",
     "react-leaflet": "^2.7.0",
     "react-map-gl": "^5.2.5",
+    "react-multi-carousel": "^2.5.5",
     "react-simple-maps": "^2.0.0",
     "rellax": "^1.12.1"
   },

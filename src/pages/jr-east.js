@@ -24,7 +24,7 @@ const JrEast = ({ data }) => {
     <div class="py-16 md:pt-20 md:pb-20">
         <div class="grid grid-cols-3 mb-10">
           <div>
-            <div className="text-black text-4xl" > Visit</div> <br/>
+            <div className="text-black text-4xl"> Visit</div> <br/>
           <a href="/" className="underline text-governor-bay-500 text-md">jr-east.com</a></div>
           <div class="col-span-2">
             
