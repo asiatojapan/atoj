@@ -3,10 +3,9 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
+import Carousel from "../components/carousel"
 import OfficeImage from "../components/image.js"
 import PostNews from "../components/postNews.js"
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 
 const IndexPage = ({ data }) => {
 
@@ -111,81 +110,14 @@ const IndexPage = ({ data }) => {
   )
 
 
-
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-      slidesToSlide: 3 // optional, default to 1.
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 2 // optional, default to 1.
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1 // optional, default to 1.
-    }
-  };
-
-  const CustomButtonGroup = ({ next, previous, goToSlide, carouselState }) => {
-    const { totalItems, currentSlide } = carouselState;
-    return (
-      <div className="flex w-full absolute" style={{top: "50%",}}>
-        <div className="flex items-center flex-shrink-0">
-        <button onClick={() => previous()} className="bg-governor-bay-600 p-5"><i class="arrow left text-white"></i></button>
-
-        </div>
-
-        <div className="w-full block flex-grow flex items-center w-auto">
-        <div className="flex justify-end flex-1"> 
-
-          <button onClick={() => next()} className="bg-governor-bay-600 p-5"><i class="arrow right"></i></button></div></div>
-      
-      </div>
-    );
-  };
-
-
-  const CustomDot = ({ onClick, active, index, carouselState }) => {
-    const { currentSlide } = carouselState;
-    return (
-      <li style={{ background: active ? "bg-grey-200" : "bg-black" }}>
-        <button
-          style={{ background: active ? "bg-grey-200" : "bg-black"}}
-          onClick={() => onClick()}
-        />
-      </li>
-    );
-  };
-
   const topics = () => (
+    <section class="py-16 px-32 hero">
     <div class="relative">
     
-
-    <Carousel
-      swipeable={false}
-      draggable={false}
-      responsive={responsive}
-      ssr={true} // means to render carousel on server-side.
-      infinite={false}
-      centerMode={true}
-      autoPlay={false}
-      keyBoardControl={true}
-      customTransition="all .5"
-      transitionDuration={1000}
-      containerClass="carousel-container relative"
-      itemClass="hover:bg-gray-200 p-3"
-      removeArrowOnDeviceType={["tablet", "mobile"]}
-      showDots={true}
-      customDot={<CustomDot />}
-      arrows={false} renderButtonGroupOutside={true} customButtonGroup={<CustomButtonGroup />}
-    >
+    <div class="grid grid-cols-3 gap-4">
       {data.allWordpressPost.edges.map(post => (
         <Link to={`/${post.node.path}`} key={post.node.wordpress_id}>
-           
+
               <div class="w-full bg-cover bg-top " style={{  
               backgroundImage: `url(${post.node.featured_media.source_url})`, backgroundPosition: 'center',
                 backgroundSize: 'cover',
@@ -203,18 +135,27 @@ const IndexPage = ({ data }) => {
             </div>
             </Link>
 
-    ))}
- </Carousel>
-
-  </div>
+        ))}
+        </div>
+      </div>
+  </section>
   )
 
   return (
     <Layout>
       <SEO title="Home" keywords={[`asiatojapan`, `application`, `react`]} />
+     
       {header()}
       {services()}
       {news()}
+      <hr/>
+      <section class="py-16 hero text-center">
+      <div className="text-md uppercase text-governor-bay-500" style={{fontFamily: "IBM Plex Sans"}}>Our Topics</div> 
+          <div className="text-4xl font-bold leading-normal text-black mb-10">
+        トピック
+        </div> 
+      <Carousel/>
+      </section>
     {topics()}
 
 

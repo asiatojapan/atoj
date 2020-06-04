@@ -27,7 +27,9 @@
     "react-map-gl": "^5.2.5",
     "react-multi-carousel": "^2.5.5",
     "react-simple-maps": "^2.0.0",
-    "rellax": "^1.12.1"
+    "react-slick": "^0.26.1",
+    "rellax": "^1.12.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1",
